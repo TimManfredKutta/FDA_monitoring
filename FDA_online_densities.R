@@ -1,14 +1,9 @@
 #Libraries
-library(sandwich)
 library(expm)
-library(ggplot2)
-library(parallel)
 library(MASS)
-library(KernSmooth)
-library(beepr)
-library(jmuOutlier)
 
-#Generation of discretized denstiy estimates before and aftr the change
+
+#Generation of discretized denstiy estimates before and after the change
 data_m<- function( mn, cp) {
   alpha_array  = runif(mn+1, 0, 1)
   beta_array  = runif(mn+1, min = 0.01, max = 1)
@@ -112,7 +107,6 @@ grid_d =  seq(-5,5, length.out = d)
 zeta = 0.05      #boundary parameter
 gamma = 0.2   #paramter in statistic
 M = 75
-k_star = 25
 CP = 100
 dependence = 1 
 hyp=0 #parameter that quantifies how deep we are in the alternative; hyp=0 is H_0
