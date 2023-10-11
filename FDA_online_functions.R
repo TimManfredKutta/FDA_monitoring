@@ -23,7 +23,7 @@ error_process_O <- function(n,nu,lambda,sigma,x0){
   for (i in 2:(n+1)) {
     x[i]  <-  x[i-1] + lambda*(nu-x[i-1])*dt + sigma*dw[i-1]
   }
-  return(x);
+  return(x*sqrt(2));
 }
 
 #Generation of discretized functions before and after the change
@@ -130,11 +130,11 @@ quantile_simulator<- function(lrmatrix, z, g){
 
 #Parameters
 
-N = 400       #Total time horizon
+N = 500       #Total time horizon
 d  = 50       #Number of grid points
 s = 1         #volatility of error process
 zeta = 0.05   #boundary parameter
-gamma = 0   #paramter in statistic
+gamma = 0.3   #paramter in statistic
 error_selection = 1 #Error type, with 1 OU and 2 BM
 CP = 100
 dependence = 1 

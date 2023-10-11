@@ -101,11 +101,11 @@ test_decision<- function(m,n, cp)
 
 
 #Parameters
-N = 400       #Total time horizon
+N = 500       #Total time horizon
 d  = 50       #Number of grid points
 grid_d =  seq(-5,5, length.out = d)
 zeta = 0.05      #boundary parameter
-gamma = 0.2   #paramter in statistic
+gamma = 0.3   #paramter in statistic
 M = 75
 CP = 100
 dependence = 1 
